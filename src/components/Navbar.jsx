@@ -9,8 +9,9 @@ export default function Navbar() {
 
   return (
     <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
-      <div className="max-w-7xl mx-auto px-6 py-4 relative flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 relative flex items-center justify-between">
 
+        {/* Mobile Hamburger */}
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="md:hidden text-2xl text-gray-700 hover:text-pink-500 transition-colors duration-200"
@@ -20,7 +21,7 @@ export default function Navbar() {
           ☰
         </button>
 
-
+        {/* Logo */}
         <a
           href="#home"
           onClick={closeMenu}
@@ -33,7 +34,7 @@ export default function Navbar() {
           />
         </a>
 
-   
+        {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">
           <a
             href="#home"
@@ -71,17 +72,25 @@ export default function Navbar() {
           </a>
         </div>
 
-        <div className="hidden sm:flex items-center gap-3">
-          <button className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-pink-500 transition-colors duration-200">
+        {/* Desktop + Mobile Auth Buttons */}
+        <div className="flex items-center gap-2 sm:gap-3">
+          <button
+            onClick={closeMenu}
+            className="px-2 sm:px-4 py-2 text-xs sm:text-sm font-medium text-gray-700 hover:text-pink-500 transition-colors duration-200"
+          >
             Sign In
           </button>
 
-          <button className="px-5 py-2.5 text-sm font-semibold text-white rounded-lg bg-brand-gradient hover:opacity-90 transition-opacity duration-200">
+          <button
+            onClick={closeMenu}
+            className="px-3 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-semibold text-white rounded-lg bg-brand-gradient hover:opacity-90 transition-opacity duration-200"
+          >
             Sign Up
           </button>
         </div>
       </div>
 
+      {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden border-t border-gray-100 bg-white">
           <div className="px-6 py-5 flex flex-col gap-1">
@@ -126,23 +135,6 @@ export default function Navbar() {
               Contact
             </a>
 
-            <div className="mt-3 pt-4 border-t border-gray-100 flex flex-col gap-3">
-
-              <button
-                onClick={closeMenu}
-                className="w-full py-3 text-base font-medium text-gray-700 border border-gray-200 rounded-lg hover:border-pink-300 hover:text-pink-500 transition-colors duration-200"
-              >
-                Sign In
-              </button>
-
-              <button
-                onClick={closeMenu}
-                className="w-full py-3 text-base font-semibold text-white rounded-lg bg-brand-gradient hover:opacity-90 transition-opacity duration-200"
-              >
-                Sign Up
-              </button>
-
-            </div>
           </div>
         </div>
       )}
