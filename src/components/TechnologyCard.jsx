@@ -15,16 +15,16 @@ export default function TechnologyCard({ technology, onAdd, isAdded }) {
       className={`rounded-2xl p-[1.5px] transition-all duration-300 ${
         isAdded
           ? "bg-gradient-to-r from-orange-500 to-pink-500 shadow-md"
-          : "bg-gray-100 hover:bg-gray-200"
+          : "bg-gray-100 hover:bg-gradient-to-r hover:from-orange-200 hover:to-pink-200 hover:shadow-md"
       }`}
     >
-      <div className="bg-white rounded-2xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between h-full">
+      <div className="bg-white rounded-2xl p-5 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between h-full">
         <div>
           <div className="flex items-start justify-between">
             <img
               src={icon}
               alt={name}
-              className="w-8 h-8 object-contain"
+              className="w-8 h-8 object-contain transition-transform duration-300 hover:scale-110"
             />
 
             {badge && (
@@ -68,7 +68,7 @@ export default function TechnologyCard({ technology, onAdd, isAdded }) {
             className={`w-full py-2.5 rounded-xl text-xs font-bold text-white transition-all duration-200 ${
               isAdded
                 ? "bg-gray-100 text-gray-400 cursor-not-allowed"
-                : "bg-gradient-to-r from-orange-500 to-pink-500 hover:opacity-90 shadow-sm"
+                : "bg-gradient-to-r from-orange-500 to-pink-500 hover:opacity-90 hover:shadow-md"
             }`}
           >
             {isAdded ? "Added to Stack" : "Add to Stack"}
