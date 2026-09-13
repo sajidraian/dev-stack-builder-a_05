@@ -7,11 +7,18 @@ export default function YourStack({ stack, onRemove, onRemoveAll }) {
             Your Stack
           </h2>
 
-          <p className="text-xs text-gray-400 mt-0.5">
-            {stack.length === 0
-              ? "No technologies selected yet."
-              : `Selected: ${stack.length}`}
-          </p>
+       <p className="text-xs text-gray-400 mt-0.5">
+  {stack.length === 0 ? (
+    "No technologies selected yet."
+  ) : (
+    <>
+      Selected:{" "}
+      <span className="font-bold text-orange-500">
+        {stack.length}
+      </span>
+    </>
+  )}
+</p>
         </div>
 
         {stack.length > 0 && (
