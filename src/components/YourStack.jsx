@@ -17,7 +17,7 @@ export default function YourStack({ stack, onRemove, onRemoveAll }) {
         {stack.length > 0 && (
           <button
             onClick={onRemoveAll}
-            className="text-xs font-semibold text-rose-500 hover:text-rose-600"
+            className="text-xs font-semibold text-rose-500 hover:text-rose-600 transition-colors"
           >
             Remove All
           </button>
@@ -25,9 +25,17 @@ export default function YourStack({ stack, onRemove, onRemoveAll }) {
       </div>
 
       {stack.length === 0 ? (
-        <div className="mt-4 border border-dashed border-gray-200 rounded-xl py-12 text-center bg-gray-50/50">
-          <p className="text-xs text-gray-400 font-medium">
-            Your stack is empty.
+        <div className="mt-4 border border-dashed border-orange-200 rounded-xl py-10 px-4 text-center bg-gradient-to-br from-orange-50/60 to-pink-50/40">
+          <div className="mx-auto w-11 h-11 rounded-full bg-gradient-to-r from-orange-500 to-pink-500 flex items-center justify-center shadow-sm">
+            <span className="text-white text-lg font-bold">+</span>
+          </div>
+
+          <p className="text-sm text-slate-700 font-semibold mt-3">
+            Your stack is empty
+          </p>
+
+          <p className="text-[11px] text-gray-400 mt-1 leading-relaxed">
+            Add technologies from the list to build your development stack.
           </p>
         </div>
       ) : (
