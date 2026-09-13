@@ -6,10 +6,9 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden text-2xl text-gray-700"
+          className="md:hidden text-2xl text-gray-700 hover:text-black transition-colors duration-200"
           aria-label="Toggle Navigation Menu"
           aria-expanded={isOpen}
         >
@@ -29,33 +28,48 @@ export default function Navbar() {
         </a>
 
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">
-          <a href="#home" className="hover:text-black">
+          <a
+            href="#home"
+            className="hover:text-black transition-colors duration-200"
+          >
             Home
           </a>
 
-          <a href="#technologies" className="hover:text-black">
+          <a
+            href="#technologies"
+            className="hover:text-black transition-colors duration-200"
+          >
             Technologies
           </a>
 
-          <a href="#projects" className="hover:text-black">
+          <a
+            href="#projects"
+            className="hover:text-black transition-colors duration-200"
+          >
             Projects
           </a>
 
-          <a href="#about" className="hover:text-black">
+          <a
+            href="#about"
+            className="hover:text-black transition-colors duration-200"
+          >
             About
           </a>
 
-          <a href="#contact" className="hover:text-black">
+          <a
+            href="#contact"
+            className="hover:text-black transition-colors duration-200"
+          >
             Contact
           </a>
         </div>
 
         <div className="flex items-center gap-3">
-          <button className="text-sm font-semibold text-gray-700 hover:text-black px-3 py-2">
+          <button className="text-sm font-semibold text-gray-700 hover:text-black px-3 py-2 transition-colors duration-200">
             Sign In
           </button>
 
-          <button className="text-sm font-semibold text-white bg-brand-gradient px-4 py-2 rounded-full shadow-md">
+          <button className="text-sm font-semibold text-white bg-brand-gradient px-4 py-2 rounded-full shadow-md hover:opacity-90 transition-opacity duration-200">
             Sign Up
           </button>
         </div>
@@ -63,10 +77,10 @@ export default function Navbar() {
 
       {isOpen && (
         <div className="md:hidden border-t border-gray-100 bg-white px-6 py-4 flex flex-col gap-4 text-sm font-medium text-gray-600">
-
           <a
             href="#home"
             onClick={() => setIsOpen(false)}
+            className="hover:text-black transition-colors duration-200"
           >
             Home
           </a>
@@ -74,6 +88,7 @@ export default function Navbar() {
           <a
             href="#technologies"
             onClick={() => setIsOpen(false)}
+            className="hover:text-black transition-colors duration-200"
           >
             Technologies
           </a>
@@ -81,6 +96,7 @@ export default function Navbar() {
           <a
             href="#projects"
             onClick={() => setIsOpen(false)}
+            className="hover:text-black transition-colors duration-200"
           >
             Projects
           </a>
@@ -88,6 +104,7 @@ export default function Navbar() {
           <a
             href="#about"
             onClick={() => setIsOpen(false)}
+            className="hover:text-black transition-colors duration-200"
           >
             About
           </a>
@@ -95,10 +112,10 @@ export default function Navbar() {
           <a
             href="#contact"
             onClick={() => setIsOpen(false)}
+            className="hover:text-black transition-colors duration-200"
           >
             Contact
           </a>
-
         </div>
       )}
     </nav>
