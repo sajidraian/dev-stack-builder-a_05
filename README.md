@@ -18,17 +18,12 @@ https://github.com/sajidraian/dev-stack-builder-a_05
 
 ## ✨ Key Features
 
-* 🧩 Explore **10+ development technologies**
-* 🧰 Add technologies to a personalized **Your Stack**
-* 🚫 Prevent duplicate technologies from being added
-* ❌ Remove individual technologies from the stack
-* 🗑️ Remove all selected technologies at once
-* 🔔 Toast notifications for add, duplicate, remove, and remove-all actions
-* ⏳ Loading state while fetching technology data
-* 📱 Fully responsive design for mobile, tablet, and desktop
-* 🎨 Shared **orange → pink → violet gradient** brand theme
-* ⚡ Interactive technology cards with hover and selected states
-* 🧭 Responsive sticky navigation bar
+## ✨ Key Features
+
+* **Technology Stack Builder** — Browse technologies and add your preferred tools to a personalized development stack.
+* **Smart Stack Management** — Prevent duplicate additions, remove individual technologies, or clear the entire stack.
+* **Responsive & Interactive UI** — Modern responsive design with loading state, toast notifications, interactive cards, and gradient styling.
+
 
 ---
 
