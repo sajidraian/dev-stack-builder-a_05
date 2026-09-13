@@ -17,7 +17,7 @@ export default function YourStack({ stack, onRemove, onRemoveAll }) {
         {stack.length > 0 && (
           <button
             onClick={onRemoveAll}
-            className="text-xs font-semibold text-rose-500 hover:text-rose-600 transition-colors"
+            className="text-xs font-semibold text-rose-500 hover:text-rose-600 hover:bg-rose-50 px-2.5 py-1.5 rounded-lg transition-all duration-200"
           >
             Remove All
           </button>
