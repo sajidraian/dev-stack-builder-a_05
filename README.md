@@ -1,10 +1,6 @@
-# 🧱 A-5 Dev Stack Builder Website
+🚀 DevStack Builder
 
-A modern and responsive **Dev Stack Builder** web application built with React. The application allows users to explore different development technologies and create their own personalized development stack.
-
-Users can browse technologies, add them to their stack, remove individual technologies, and clear the entire stack. The project also includes responsive design, loading states, duplicate prevention, and toast notifications for a better user experience.
-
----
+A modern and responsive DevStack Builder web application where users can explore different development technologies and build their own personalized technology stack.
 
 ## 🌐 Live Site & Repository
 
