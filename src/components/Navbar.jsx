@@ -10,9 +10,7 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100">
       
-      {/* =========================
-          MAIN NAVBAR
-      ========================== */}
+     
       <div
         className="
           max-w-7xl mx-auto
@@ -24,9 +22,7 @@ export default function Navbar() {
         "
       >
 
-        {/* =========================
-            MOBILE HAMBURGER
-        ========================== */}
+       
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="
@@ -45,9 +41,7 @@ export default function Navbar() {
         </button>
 
 
-        {/* =========================
-            LOGO
-        ========================== */}
+     
         <a
           href="#home"
           onClick={closeMenu}
@@ -76,9 +70,7 @@ export default function Navbar() {
         </a>
 
 
-        {/* =========================
-            DESKTOP NAVIGATION
-        ========================== */}
+    
         <div
           className="
             hidden md:flex
@@ -127,9 +119,6 @@ export default function Navbar() {
         </div>
 
 
-        {/* =========================
-            AUTH BUTTONS
-        ========================== */}
         <div
           className="
             flex
@@ -184,9 +173,6 @@ export default function Navbar() {
       </div>
 
 
-      {/* =========================
-          MOBILE MENU
-      ========================== */}
       {isOpen && (
         <div
           className="
