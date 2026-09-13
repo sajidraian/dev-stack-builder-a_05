@@ -8,7 +8,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden text-2xl text-gray-700 hover:text-black transition-colors duration-200"
+          className="md:hidden text-2xl text-gray-700 hover:text-pink-500 transition-colors duration-200"
           aria-label="Toggle Navigation Menu"
           aria-expanded={isOpen}
         >
@@ -30,46 +30,46 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">
           <a
             href="#home"
-            className="hover:text-black transition-colors duration-200"
+            className="hover:text-pink-500 transition-colors duration-200"
           >
             Home
           </a>
 
           <a
             href="#technologies"
-            className="hover:text-black transition-colors duration-200"
+            className="hover:text-pink-500 transition-colors duration-200"
           >
             Technologies
           </a>
 
           <a
             href="#projects"
-            className="hover:text-black transition-colors duration-200"
+            className="hover:text-pink-500 transition-colors duration-200"
           >
             Projects
           </a>
 
           <a
             href="#about"
-            className="hover:text-black transition-colors duration-200"
+            className="hover:text-pink-500 transition-colors duration-200"
           >
             About
           </a>
 
           <a
             href="#contact"
-            className="hover:text-black transition-colors duration-200"
+            className="hover:text-pink-500 transition-colors duration-200"
           >
             Contact
           </a>
         </div>
 
         <div className="flex items-center gap-3">
-          <button className="text-sm font-semibold text-gray-700 hover:text-black px-3 py-2 transition-colors duration-200">
+          <button className="text-sm font-semibold text-gray-700 hover:text-pink-500 px-3 py-2 transition-colors duration-200">
             Sign In
           </button>
 
-          <button className="text-sm font-semibold text-white bg-brand-gradient px-4 py-2 rounded-full shadow-md hover:opacity-90 transition-opacity duration-200">
+          <button className="text-sm font-semibold text-white bg-gradient-to-r from-orange-500 to-pink-500 px-4 py-2 rounded-full shadow-md hover:opacity-90 hover:shadow-lg transition-all duration-200">
             Sign Up
           </button>
         </div>
@@ -80,7 +80,7 @@ export default function Navbar() {
           <a
             href="#home"
             onClick={() => setIsOpen(false)}
-            className="hover:text-black transition-colors duration-200"
+            className="hover:text-pink-500 transition-colors duration-200"
           >
             Home
           </a>
@@ -88,7 +88,7 @@ export default function Navbar() {
           <a
             href="#technologies"
             onClick={() => setIsOpen(false)}
-            className="hover:text-black transition-colors duration-200"
+            className="hover:text-pink-500 transition-colors duration-200"
           >
             Technologies
           </a>
@@ -96,7 +96,7 @@ export default function Navbar() {
           <a
             href="#projects"
             onClick={() => setIsOpen(false)}
-            className="hover:text-black transition-colors duration-200"
+            className="hover:text-pink-500 transition-colors duration-200"
           >
             Projects
           </a>
@@ -104,7 +104,7 @@ export default function Navbar() {
           <a
             href="#about"
             onClick={() => setIsOpen(false)}
-            className="hover:text-black transition-colors duration-200"
+            className="hover:text-pink-500 transition-colors duration-200"
           >
             About
           </a>
@@ -112,7 +112,7 @@ export default function Navbar() {
           <a
             href="#contact"
             onClick={() => setIsOpen(false)}
-            className="hover:text-black transition-colors duration-200"
+            className="hover:text-pink-500 transition-colors duration-200"
           >
             Contact
           </a>
