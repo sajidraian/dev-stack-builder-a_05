@@ -1,13 +1,17 @@
-
 import { useState } from "react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
   return (
     <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-6 py-4 relative flex items-center justify-between">
 
+        {/* Mobile Menu Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="md:hidden text-2xl text-gray-700 hover:text-pink-500 transition-colors duration-200"
@@ -17,9 +21,10 @@ export default function Navbar() {
           ☰
         </button>
 
+        {/* Logo */}
         <a
           href="#home"
-          onClick={() => setIsOpen(false)}
+          onClick={closeMenu}
           className="flex items-center gap-2 md:static absolute left-1/2 -translate-x-1/2"
         >
           <img
@@ -29,7 +34,7 @@ export default function Navbar() {
           />
         </a>
 
-    
+        {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">
           <a
             href="#home"
@@ -67,63 +72,84 @@ export default function Navbar() {
           </a>
         </div>
 
-        <div className="flex items-center gap-3">
-          <button className="hidden sm:block text-sm font-medium text-gray-600 hover:text-pink-500 transition-colors duration-200">
+        {/* Desktop Sign In / Sign Up */}
+        <div className="hidden sm:flex items-center gap-3">
+          <button className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-pink-500 transition-colors duration-200">
             Sign In
           </button>
 
-          <button className="hidden sm:block px-4 py-2 text-sm font-semibold text-white rounded-lg bg-brand-gradient hover:opacity-90 transition-opacity duration-200">
+          <button className="px-5 py-2.5 text-sm font-semibold text-white rounded-lg bg-brand-gradient hover:opacity-90 transition-opacity duration-200">
             Sign Up
           </button>
         </div>
       </div>
 
+      {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden border-t border-gray-100 bg-white px-6 py-4">
-          <div className="flex flex-col gap-4 text-sm font-medium text-gray-600">
+        <div className="md:hidden border-t border-gray-100 bg-white">
+          <div className="px-6 py-5 flex flex-col gap-1">
+
             <a
               href="#home"
-              onClick={() => setIsOpen(false)}
-              className="hover:text-pink-500 transition-colors duration-200"
+              onClick={closeMenu}
+              className="py-3 text-lg text-gray-600 hover:text-pink-500 transition-colors duration-200"
             >
               Home
             </a>
 
             <a
               href="#technologies"
-              onClick={() => setIsOpen(false)}
-              className="hover:text-pink-500 transition-colors duration-200"
+              onClick={closeMenu}
+              className="py-3 text-lg text-gray-600 hover:text-pink-500 transition-colors duration-200"
             >
               Technologies
             </a>
 
             <a
               href="#projects"
-              onClick={() => setIsOpen(false)}
-              className="hover:text-pink-500 transition-colors duration-200"
+              onClick={closeMenu}
+              className="py-3 text-lg text-gray-600 hover:text-pink-500 transition-colors duration-200"
             >
               Projects
             </a>
 
             <a
               href="#about"
-              onClick={() => setIsOpen(false)}
-              className="hover:text-pink-500 transition-colors duration-200"
+              onClick={closeMenu}
+              className="py-3 text-lg text-gray-600 hover:text-pink-500 transition-colors duration-200"
             >
               About
             </a>
 
             <a
               href="#contact"
-              onClick={() => setIsOpen(false)}
-              className="hover:text-pink-500 transition-colors duration-200"
+              onClick={closeMenu}
+              className="py-3 text-lg text-gray-600 hover:text-pink-500 transition-colors duration-200"
             >
               Contact
             </a>
+
+            {/* Mobile Auth Buttons */}
+            <div className="mt-3 pt-4 border-t border-gray-100 flex flex-col gap-3">
+
+              <button
+                onClick={closeMenu}
+                className="w-full py-3 text-base font-medium text-gray-700 border border-gray-200 rounded-lg hover:border-pink-300 hover:text-pink-500 transition-colors duration-200"
+              >
+                Sign In
+              </button>
+
+              <button
+                onClick={closeMenu}
+                className="w-full py-3 text-base font-semibold text-white rounded-lg bg-brand-gradient hover:opacity-90 transition-opacity duration-200"
+              >
+                Sign Up
+              </button>
+
+            </div>
           </div>
         </div>
       )}
     </nav>
   );
 }
-
